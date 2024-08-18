@@ -10,9 +10,10 @@
 
     // #
     // Два типа создания выражения:
-
     // const regexp_1 = new RegExp('шаблон', 'флаги')
     // const regexp_2 = /шаблон/флаги
+
+    // match - метод поиска совпадений
 
     // const regexp_str = /Сергей/
     // const str = 'Привет, меня зовут Сергей. Мне 49 лет'
@@ -53,13 +54,73 @@
     // console.log('result_match_str', result_match_str)
 
     // \s - пробельный символ [ \t\n\v\f\r]
-    const regexp_str = /\d\d\s/
-    const str = 'Привет, меня зовут Сергей! Мне 49 лет'
-    const result_match_str = str.match(regexp_str)
-    console.log('result_match_str', result_match_str)
+    // const regexp_str = /\d\d\s/
+    // const str = 'Привет, меня зовут Сергей! Тебе 20? Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
 
-    //
+    // \S - не пробельный символ
+    // const regexp_str = /\d\d\S/
+    // const str = 'Привет, меня зовут Сергей! Тебе 20? Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
 
+    // \w - слово [1-9], [a-zA-Z], [_]
+    // const regexp_str = /\s\w\w\s/
+    // const str = 'Привет, меня зовут Сергей! Тебе 20? Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // const regexp_str = /\w\w\w\w/
+    // const str = 'Привет, меня зовут Sergey! Тебе 20? Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // const regexp_str = /\w/
+    // const str = 'В лодаш используй _.'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // \W не слово - кроме ([1-9], [a-zA-Z], [_])
+    // const regexp_str = /\W/
+    // const str = 'В лодаш используй _.'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // #
+    // [] - наборы
+    // const regexp_str = /[ЮИ]ра/
+    // const str = 'Это Юра и Ира сказали Ура!'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // [^] - Исключающие наборы
+    // const regexp_str = /[^ЮИ]ра/
+    // const str = 'Это Ира и Юра сказали Ура!'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // #
+    // [-] - диапазоны
+    // const regexp_str = /[в-д]/
+    // const str = 'абвгдежзийклмнопрстуфхцчщъыьэюя'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // const regexp_str = /[^а-в]/
+    // const str = 'абвгдежзийклмнопрстуфхцчщъыьэюя'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // const regexp_str = /[^а-вг-е]/
+    // const str = 'абвгдежзийклмнопрстуфхцчщъыьэюя'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // const regexp_str = /[^а-я]/
+    // const str = 'абвгдеёжзийклмнопрстуфхцчщъыьэюя'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+    // console.log(
+    //     'а'.charCodeAt(),
+    //     'я'.charCodeAt(),
+    //     'ё'.charCodeAt()
+    // )
 </script>
 </body>
 </html>
