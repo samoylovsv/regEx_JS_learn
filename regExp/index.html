@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регулярниые выражения в javascript</title>
+</head>
+<body>
+<script>
+    "use strict"
+
+    // #
+    // Два типа создания выражения:
+
+    // const regexp_1 = new RegExp('шаблон', 'флаги')
+    // const regexp_2 = /шаблон/флаги
+
+    // const regexp_str = /Сергей/
+    // const str = 'Привет, меня зовут Сергей. Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // const regexp_str = /Сергей./
+    // const str = 'Привет, меня зовут Сергей. Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // #
+    // . - любой символ, кроме переноса строки
+
+    // const regexp_str = /Сергей./
+    // const str = 'Привет, меня зовут Сергей! Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // const regexp_str = /Сергей\./
+    // const str = 'Привет, меня зовут Сергей! Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // #
+    // Символьные классы
+
+    // \d - число [0-9]
+    // const regexp_str = /\d\d/
+    // const str = 'Привет, меня зовут Сергей! Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // \D - не число
+    // const regexp_str = /\D\D/
+    // const str = 'Привет, меня зовут Сергей! Мне 49 лет'
+    // const result_match_str = str.match(regexp_str)
+    // console.log('result_match_str', result_match_str)
+
+    // \s - пробельный символ [ \t\n\v\f\r]
+    const regexp_str = /\d\d\s/
+    const str = 'Привет, меня зовут Сергей! Мне 49 лет'
+    const result_match_str = str.match(regexp_str)
+    console.log('result_match_str', result_match_str)
+
+    //
+
+</script>
+</body>
+</html>
